@@ -40,17 +40,18 @@ La app queda disponible en `http://localhost:5173`.
 
 ```
 src/
-├── api.ts                 # instancia de axios + manejo de errores
-├── types.ts                # tipos TS que reflejan los DTOs del backend
-├── auth/AuthContext.tsx    # estado de sesión (token, usuario actual)
+├── api.ts                
+├── styles.css             
+├── types.ts                
+├── auth/AuthContext.tsx    
 ├── components/
 │   ├── Navbar.tsx
 │   └── ProtectedRoute.tsx
 ├── pages/
 │   ├── RegisterPage.tsx
 │   ├── LoginPage.tsx
-│   ├── SearchPage.tsx      # búsqueda + reserva
+│   ├── SearchPage.tsx      
 │   └── MyBookingsPage.tsx
-├── App.tsx                 # rutas
-└── main.tsx                # entry point
+├── App.tsx                 
+└── main.tsx                
 ```
