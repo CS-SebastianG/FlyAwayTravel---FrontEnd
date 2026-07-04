@@ -1,0 +1,253 @@
+:root {
+  --color-bg: #f5f7fa;
+  --color-surface: #ffffff;
+  --color-border: #dde3ea;
+  --color-text: #1f2933;
+  --color-text-muted: #5f6b7a;
+  --color-primary: #1d4ed8;
+  --color-primary-hover: #1e40af;
+  --color-success-bg: #e6f6ec;
+  --color-success-text: #1a7f4b;
+  --color-error-bg: #fdecec;
+  --color-error-text: #b3261e;
+  --color-info-bg: #eaf2fd;
+  --color-info-text: #1d4ed8;
+  --radius: 8px;
+  --shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, Arial, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 14px 28px;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--shadow);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--color-primary);
+  white-space: nowrap;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 18px;
+  flex: 1;
+}
+
+.navbar-links a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.navbar-links a:hover {
+  color: var(--color-primary);
+}
+
+.navbar-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar-username {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.navbar-username-guest {
+  font-style: italic;
+}
+
+.app-content {
+  flex: 1;
+  padding: 32px 28px 64px;
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.page h1 {
+  margin: 0 0 6px;
+  font-size: 1.6rem;
+}
+
+.page-subtitle {
+  margin: 0 0 20px;
+  color: var(--color-text-muted);
+}
+
+.page-narrow {
+  max-width: 420px;
+}
+
+.page-footer-link {
+  margin-top: 14px;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form-row {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.form-row .field {
+  flex: 1 1 180px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.9rem;
+}
+
+.field span {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.field input {
+  padding: 9px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  background: var(--color-bg);
+}
+
+.field input:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 1px;
+  background: var(--color-surface);
+}
+
+.btn {
+  border: none;
+  border-radius: var(--radius);
+  padding: 10px 18px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--color-primary-hover);
+}
+
+.btn-secondary {
+  background: var(--color-bg);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: var(--color-border);
+}
+
+.btn-small {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+}
+
+.alert {
+  padding: 10px 14px;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+}
+
+.alert-error {
+  background: var(--color-error-bg);
+  color: var(--color-error-text);
+}
+
+.alert-success {
+  background: var(--color-success-bg);
+  color: var(--color-success-text);
+}
+
+.alert-info {
+  background: var(--color-info-bg);
+  color: var(--color-info-text);
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  padding: 0;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.9rem;
+}
+
+.table th {
+  background: var(--color-bg);
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.text-error {
+  color: var(--color-error-text);
+}
