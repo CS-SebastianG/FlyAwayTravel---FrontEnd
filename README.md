@@ -16,20 +16,18 @@ npm run dev
 
 La app queda disponible en `http://localhost:5173`.
 
-> Recuerda: la base de datos del backend es en memoria (H2), así que cada vez que reinicies el backend se pierden usuarios, vuelos y reservas.
-
 ## Funcionalidades implementadas
 
 | Pantalla | Estado |
 |---|---|
-| Registro (`POST /users/register`) | ✅ validación de campos vacíos, muestra errores del backend, redirige al login |
-| Login (`POST /auth/login`) | ✅ guarda JWT en `localStorage`, muestra errores, redirige a búsqueda |
-| Nombre de usuario autenticado (`GET /users/current`) | ✅ visible en la barra de navegación |
-| Búsqueda de vuelos (`GET /flights/search`) | ✅ por número de vuelo / aerolínea / rango de fechas de salida, tabla de resultados, mensaje de resultado vacío |
-| Reservar vuelo (`POST /flights/book`) | ✅ botón por resultado, solo si hay sesión iniciada, muestra ID de reserva o error del backend |
-| Detalle de reserva (`GET /flights/book/{id}`) | ✅ usado en "Mis reservas" |
-| Mis reservas | ✅ lista las reservas hechas desde este navegador (IDs guardados en `localStorage`) |
-| Logout & rutas protegidas | ✅ botón de logout limpia el token; `/my-bookings` redirige a `/login` si no hay sesión |
+| Registro (`POST /users/register`) | validación de campos vacíos, muestra errores del backend, redirige al login |
+| Login (`POST /auth/login`) | guarda JWT en `localStorage`, muestra errores, redirige a búsqueda |
+| Nombre de usuario autenticado (`GET /users/current`) | visible en la barra de navegación |
+| Búsqueda de vuelos (`GET /flights/search`) | por número de vuelo / aerolínea / rango de fechas de salida, tabla de resultados, mensaje de resultado vacío |
+| Reservar vuelo (`POST /flights/book`) | botón por resultado, solo si hay sesión iniciada, muestra ID de reserva o error del backend |
+| Detalle de reserva (`GET /flights/book/{id}`) | usado en "Mis reservas" |
+| Mis reservas | lista las reservas hechas desde este navegador (IDs guardados en `localStorage`) |
+| Logout & rutas protegidas | botón de logout limpia el token; `/my-bookings` redirige a `/login` si no hay sesión |
 
 ## Notas técnicas
 
